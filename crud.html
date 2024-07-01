@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        #total::before{
+            content: "Total :  ";
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <br>
+    <div class="container text-white" id="cont">
+        <h1 class="text-center">CRUD</h1>
+        <br><br>
+        <div id="form_basic" >
+            <input type="text" class="form-control bg-black text-white" placeholder="Tittle" name="" id="input_tittle"><br>
+        <span class="d-flex gap-3" >
+            <input type="text" onkeyup="tot()" class="form-control w-25 bg-black text-white" placeholder="Price" id="input_price">
+            <input type="text" onkeyup="tot()" class="form-control w-25 bg-black text-white" placeholder="Taxes" id="input_taxes">
+            <input type="text" onkeyup="tot()" class="form-control w-25 bg-black text-white" placeholder="Ads" id="input_ads">
+            <input type="text" onkeyup="tot()" class="form-control w-25 bg-black text-white" placeholder="Discount" id="input_discount">
+            <span id="total" class="btn w-25 text-white" style="background-color: red;"></span>    
+        </span><br>
+            <button class="btn btn-light w-100 fs-5 fw-bold" id="btn_create">Submit</button><br><br>
+        
+            <button class="btn btn-light w-100 fs-5 fw-bold " id="btn_delete_all">Delete All</button><br>
+        </div>
+        <table class="table mt-5 text-white" id="tab">
+                <thead>
+                    <tr>
+                    
+                    <th scope="col">Tittle</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Taxes</th>
+                    <th scope="col">Ads</th>
+                    <th scope="col">Discount</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+                </tr>
+                </thead>
+            <tbody id="adding_list" class="text-white">
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="crudoop.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="all.min.js"></script>
+</body>
+</html>
